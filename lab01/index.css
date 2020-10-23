@@ -1,0 +1,48 @@
+body {
+  background-color: #282a36;
+  color: #dadada;
+  font-size: 20px;
+  font-family: Courier, Garamond, serif;
+  width: 1024px;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  color: #bd93f9;
+  font-family: mononokiRegular, Garamond, serif;
+  font-size: 54px;
+}
+
+h2 {
+  color: #50fa7b;
+  font-family: mononokiRegular, Garamond, serif;
+  font-size: 34px;
+}
+
+blockquote {
+  font-family: Consolas, Garamond, serif;
+  text-align: center;
+  font-style: oblique;
+  font-size: 26px;
+}
+
+a:link,
+a:visited,
+a:hover {
+  color: #8be9fd;
+}
+
+a:visited {
+  color: #f1fa8c;
+}
+
+hr {
+  color: #4d4d4d;
+}
+
+img {
+  float: right;
+}

@@ -1,0 +1,143 @@
+/* Federico Serra - matricola: 898925 - Turno B
+   - esercizio 2 di laboratorio: 
+     consegna per verificare la comprensione in CSS di layout, box model, posizionamento, ecc.. 
+     Il seguente file contiene il foglio di stile per il file tmnt.html, soddisfando i requisiti
+     della consegna. */
+
+/* elementi di stile raggruppati */
+
+body,
+dl,
+.review {
+  font-size: 8pt;
+}
+
+h1,
+#banner,
+#numrev {
+  text-align: center;
+}
+
+h1,
+#val,
+.review,
+dt {
+  font-weight: bold;
+}
+
+aside,
+#numrev {
+  background-color: #a2b964;
+}
+
+#leftcolumn,
+#rightcolumn {
+  width: 47%;
+  margin-left: 2%;
+}
+
+.reviewicon,
+#leftcolumn,
+#rightcolumn,
+#article {
+  float: left;
+}
+
+.review,
+#inter {
+  border-radius: 10px;
+}
+
+/* elementi di stile non comuni */
+/* Nota: alcuni elementi non sono stati raggruppati -volontariamente- in favore di una leggibilità/comprensione migliore */
+
+body {
+  background-image: url("http://courses.cs.washington.edu/courses/cse190m/11sp/homework/2/background.png");
+  font-family: Verdana, Tahoma, sans-serif;
+  margin: 0px;
+}
+
+aside {
+  width: 250px;
+  float: right;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.5;
+}
+
+h1 {
+  font-size: 24pt;
+  font-family: Tahoma, Verdana, sans-serif;
+  text-shadow: 3px 3px #999999;
+}
+
+dl {
+  font-family: Arial, sans-serif;
+  padding-left: 10pt;
+  padding-right: 10pt;
+}
+
+dt {
+  margin-top: 10pt;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#banner {
+  background-image: url(https://courses.cs.washington.edu/courses/cse190m/11sp/homework/2/bannerbg.png);
+  height: 50px;
+}
+
+#inter {
+  width: 800px;
+  border: 4px solid grey;
+  margin: auto;
+}
+
+#article {
+  width: 550px;
+}
+
+#valblock {
+  background-image: url(https://courses.cs.washington.edu/courses/cse190m/11sp/homework/2/rbg.png);
+  height: 83px;
+}
+
+#val {
+  vertical-align: top;
+  color: red;
+  font-size: 48pt;
+}
+
+#numrev {
+  padding: 5px;
+  clear: both;
+  margin-bottom: 0px;
+}
+
+.reviewicon {
+  padding-right: 5px;
+}
+
+.review {
+  background-color: #e8dc9b;
+  border: 2px solid grey;
+  padding: 8px;
+}
+
+.reviewer {
+  text-align: left;
+  margin-bottom: 20pt;
+  overflow: auto;
+}
+
+.pub {
+  font-style: italic;
+}

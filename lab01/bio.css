@@ -1,0 +1,47 @@
+body {
+  color: #404040;
+  background-color: white;
+  font-family: Georgia, Garamond, serif;
+  font-size: 11pt;
+  width: 1024px;
+}
+
+h1,
+h2 {
+  color: #a4a400;
+  background-color: #f0f0f0;
+  font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+  text-decoration: underline;
+  display: table;
+}
+
+h1 {
+  font-size: 22pt;
+  font-weight: bold;
+  margin: 0px auto 0px auto;
+}
+
+h2 {
+  font-size: 18pt;
+  text-align: left;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #a4a400;
+}
+
+ul {
+  list-style-image: url("img/bulleted_list.jpg");
+}
+
+#firsthr {
+  clear: right;
+}
+
+img,
+.date {
+  float: right;
+}

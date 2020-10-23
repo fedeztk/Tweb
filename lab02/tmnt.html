@@ -1,0 +1,349 @@
+<!-- Federico Serra - matricola: 898925 - Turno B
+   - esercizio 2 di laboratorio: 
+     consegna per verificare la comprensione in CSS di layout, box model, posizionamento, ecc.. 
+     Il seguente file contiene il codice html modificato a partire da skeleton.html. 
+     Come da consegna sono stati aggiunti solo i tags div/span e gli attributi class/id.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TMNT - Rancid Tomatoes</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="movie.css" type="text/css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="http://courses.cs.washington.edu/courses/cse190m/11sp/homework/2/rotten.gif"
+      type="image/png"
+    />
+  </head>
+
+  <body>
+    <div id="banner">
+      <img
+        src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/banner.png"
+        alt="Rancid Tomatoes"
+      />
+    </div>
+
+    <h1>TMNT (2007)</h1>
+
+    <div id="inter">
+      <aside>
+        <div>
+          <img
+            src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/overview.png"
+            alt="general overview"
+          />
+        </div>
+
+        <dl>
+          <dt>STARRING</dt>
+          <dd>
+            Patrick Stewart <br />
+            Mako <br />
+            Sarah Michelle Gellar <br />
+            Kevin Smith
+          </dd>
+
+          <dt>DIRECTOR</dt>
+          <dd>Kevin Munroe</dd>
+
+          <dt>RATING</dt>
+          <dd>PG</dd>
+
+          <dt>THEATRICAL RELEASE</dt>
+          <dd>Mar 23, 2007</dd>
+
+          <dt>MOVIE SYNOPSIS</dt>
+          <dd>
+            After the defeat of their old arch nemesis, The Shredder, the
+            Turtles have grown apart as a family.
+          </dd>
+
+          <dt>MPAA RATING</dt>
+          <dd>
+            PG, for animated action violence, some scary cartoon images and mild
+            language
+          </dd>
+
+          <dt>RELEASE COMPANY</dt>
+          <dd>Warner Bros.</dd>
+
+          <dt>RUNTIME</dt>
+          <dd>90 mins</dd>
+
+          <dt>GENRE</dt>
+          <dd>
+            Action/Adventure, Comedies, Childrens, Martial Arts, Superheroes,
+            Ninjas, Animated Characters
+          </dd>
+
+          <dt>BOX OFFICE</dt>
+          <dd>$54,132,596</dd>
+
+          <dt>LINKS</dt>
+          <dd>
+            <ul>
+              <li>
+                <a href="http://www.ninjaturtles.com/"
+                  >The Official TMNT Site</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://www.rottentomatoes.com/m/teenage_mutant_ninja_turtles/"
+                  >RT Review</a
+                >
+              </li>
+              <li><a href="http://www.rottentomatoes.com/">RT Home</a></li>
+              <li>
+                <a href="http://www.cs.washington.edu/190m/">CSE 190 M</a>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </aside>
+
+      <div id="article">
+        <div id="valblock">
+          <img
+            src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rottenbig.png"
+            alt="Rotten"
+          />
+          <span id="val">33%</span>
+        </div>
+
+        <div id="leftcolumn">
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q
+              >Ditching the cheeky, self-aware wink that helped to excuse the
+              concept's inherent corniness, the movie attempts to look polished
+              and 'cool,' but the been-there animation can't compete with the
+              then-cutting-edge puppetry of the 1990 live-action movie.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Peter Debruge <br />
+            <span class="pub"> Variety </span>
+          </p>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/fresh.gif"
+              alt="Fresh"
+              class="reviewicon"
+            />
+            <q
+              >TMNT is a fun, action-filled adventure that will satisfy longtime
+              fans and generate a legion of new ones.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Todd Gilchrist <br />
+            <span class="pub">IGN Movies </span>
+          </p>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q>It stinks!</q>
+          </p>
+          <div class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Jay Sherman (unemployed)
+          </div>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q
+              >The rubber suits are gone and they've been redone with fancy
+              computer technology, but that hasn't stopped them from becoming
+              dull.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Joshua Tyler <br />
+            <span class="pub"> CinemaBlend.com </span>
+          </p>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q
+              >This is a heartfelt and engaging story about love, sacrifice and
+              what it means to envisage life without a loved one.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Nate Adams<br />
+            <span class="pub"> The Only Critic </span>
+          </p>
+        </div>
+
+        <div id="rightcolumn">
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q
+              >The turtles themselves may look prettier, but are no smarter;
+              torn irreparably from their countercultural roots, our superheroes
+              on the half shell have been firmly co-opted by the industry their
+              creators once sought to spoof.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Jeannette Catsoulis <br />
+            <span class="pub"> New York Times </span>
+          </p>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q
+              >Impersonally animated and arbitrarily plotted, the story appears
+              to have been made up as the filmmakers went along.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Ed Gonzalez <br />
+            <span class="pub"> Slant Magazine </span>
+          </p>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/fresh.gif"
+              alt="Fresh"
+              class="reviewicon"
+            />
+            <q
+              >The striking use of image and motion allows each sequence to
+              leave an impression. It's an accomplished restart to this
+              franchise.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Mark Palermo <br />
+            <span class="pub"> Coast (Halifax, Nova Scotia) </span>
+          </p>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q
+              >The script feels like it was computer generated. This mechanical
+              presentation lacks the cheesy charm of the three live action
+              films.</q
+            >
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Steve Rhodes <br />
+            <span class="pub"> Internet Reviews </span>
+          </p>
+
+          <p class="review">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rotten.gif"
+              alt="Rotten"
+              class="reviewicon"
+            />
+            <q>A thought-provoking debut.</q>
+          </p>
+          <p class="reviewer">
+            <img
+              src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/critic.gif"
+              alt="Critic"
+              class="reviewicon"
+            />
+            Jourdain Searles <br />
+            <span class="pub"> Hollywood Reporter </span>
+          </p>
+        </div>
+      </div>
+      <p id="numrev">(1-10) of 88</p>
+    </div>
+
+    <footer>
+      <a href="http://validator.w3.org/check/referer">
+        <img
+          width="88"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png "
+          alt="Valid HTML5!"
+        />
+      </a>
+      <br />
+      <a href="http://jigsaw.w3.org/css-validator/check/referer"
+        ><img
+          src="http://jigsaw.w3.org/css-validator/images/vcss"
+          alt="Valid CSS!"
+      /></a>
+    </footer>
+  </body>
+</html>
