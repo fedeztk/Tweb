@@ -57,8 +57,8 @@ $rev_files = glob("$movie/review*.txt");
             ?>
             <div id="leftcolumn">
                 <?php
-                $left_col_rev = ($num_rev_display + 1) / 2;
-                for ($i = 0; $i < $left_col_rev - 1; $i++) {
+                $left_col_rev = (int)(($num_rev_display + 1) / 2);
+                for ($i = 0; $i < $left_col_rev; $i++) {
                     list($review, $rating, $reviewer, $pub) = file($rev_files[$i], FILE_IGNORE_NEW_LINES);
                 ?>
                     <p class="quotes">
@@ -87,7 +87,8 @@ $rev_files = glob("$movie/review*.txt");
             </div><!-- closing div "leftcolumn" -->
             <div id="rightcolumn">
                 <?php
-                for ($j = $left_col_rev; $j < $num_rev_display; $j++) {
+                //loop that display remanining reviews, upper bound(num_rev_display)->10
+                for ($j = $left_col_rev; $j < $num_rev_display; $j++) { 
                     list($review, $rating, $reviewer, $pub) = file($rev_files[$j], FILE_IGNORE_NEW_LINES);
                 ?>
                     <p class="quotes">
@@ -126,8 +127,7 @@ $rev_files = glob("$movie/review*.txt");
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
         <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
     </a>
-</div>
-<!-- closing div "validators" -->
+</div><!-- closing div "validators" -->
 
 </body>
 
