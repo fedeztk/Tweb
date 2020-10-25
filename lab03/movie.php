@@ -10,7 +10,7 @@ $movie = $_GET["film"];
 list($movie_title, $movie_year, $movie_rate) = file("$movie/info.txt");
 // movie overview 
 $overiew_lines = file("$movie/overview.txt", FILE_IGNORE_NEW_LINES);
-// movie reviewes file names
+// movie reviews file names
 $rev_files = glob("$movie/review*.txt");
 ?>
 
@@ -40,7 +40,7 @@ $rev_files = glob("$movie/review*.txt");
             if ($movie_rate <= 60) {
             ?>
                 <img src="http://www.cs.washington.edu/education/courses/cse190m/11sp/homework/2/rottenbig.png" alt="Rotten" />
-                <span class="evaluation"> <?= $movie_rate ?>%</span>
+                <span class="evaluation"> <?= trim($movie_rate) ?>%</span>
             <?php
             } else {
             ?>
@@ -57,6 +57,7 @@ $rev_files = glob("$movie/review*.txt");
             ?>
             <div id="leftcolumn">
                 <?php
+                //evaluate number of review for leftcolumn (NEVER < then rightcolumn)
                 $left_col_rev = (int)(($num_rev_display + 1) / 2);
                 for ($i = 0; $i < $left_col_rev; $i++) {
                     list($review, $rating, $reviewer, $pub) = file($rev_files[$i], FILE_IGNORE_NEW_LINES);
@@ -129,6 +130,6 @@ $rev_files = glob("$movie/review*.txt");
     </a>
 </div><!-- closing div "validators" -->
 
-</body>
+</body><!--closing body (opened in top.html)-->
 
-</html>
+</html><!--closing html (opened in top.html)-->
