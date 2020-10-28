@@ -145,5 +145,5 @@ Corso di Tecnologie Web
                 <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
             </a>
         </div><!-- closing div "validators" -->
-    </body><!--closing body (opened in top.html)-->
-</html><!--closing html (opened in top.html)-->
+    </body><!-- closing body -->
+</html><!-- closing html -->
