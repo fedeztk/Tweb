@@ -5,46 +5,47 @@ You should not need to modify this file.  Your pages should work with it as-is.
 */
 
 * {
-	font-size: 12pt;
-	font-family: "Verdana", "Geneva", sans-serif;
+  font-size: 12pt;
+  font-family: "Verdana", "Geneva", sans-serif;
 }
 
 a {
-	color: #F44;
-	text-decoration: none;
+  color: #f44;
+  text-decoration: none;
 }
 
 a:hover {
-	background-color: #FFA;
+  background-color: #ffa;
 }
 
 a img {
-	border: none;
+  border: none;
 }
 
 #bannerarea {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 body {
-	background-color: white;
-	padding-left: 1em;
+  background-color: white;
+  padding-left: 1em;
 }
 
-body > div, form {
-	overflow: hidden;
-	width: 35em;
+body > div,
+form {
+  overflow: hidden;
+  width: 35em;
 }
 
 div {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 /* form styles */
 fieldset {
-	background-color: #E0E0FF;
-	border: 2px outset gray;
-	border-radius: 10px;
+  background-color: #e0e0ff;
+  border: 2px outset gray;
+  border-radius: 10px;
 }
 
 /* the bold text labels to the left of each form field */
@@ -52,55 +53,55 @@ fieldset strong,
 ul strong,
 fieldset label.left,
 fieldset .column {
-	float: left;
-	width: 11em;
+  float: left;
+  width: 11em;
 }
 
 h1 {
-	margin-top: 0em;
+  margin-top: 0em;
 }
 
 input[type="submit"] {
-	background-color: #FAA;
-	font-size: 120%;
-	font-weight: bold;
+  background-color: #faa;
+  font-size: 120%;
+  font-weight: bold;
 }
 
 legend {
-	background-color: white;
-	border: 2px outset gray;
-	padding: 0.2em;
+  background-color: white;
+  border: 2px outset gray;
+  padding: 0.2em;
 }
 
 .match {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .match img {
-	width: 150px;
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 3em;
+  width: 150px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 3em;
 }
 
 .match p {
-	background-color: #E0E0FF;
-	clear: left;
+  background-color: #e0e0ff;
+  clear: left;
 }
 
 .match ul {
-	padding-left: 160px;
+  padding-left: 160px;
 }
 
 ul {
-	list-style-type: none;
-	padding-left: 0em;
+  list-style-type: none;
+  padding-left: 0em;
 }
 
 ul li a img {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 #w3c {
-	clear: both;
+  clear: both;
 }
