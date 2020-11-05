@@ -1,9 +1,12 @@
 <!-- 
-TODO:
-check code styling (comments, spaces, etc..)
-descrivere la scelta fatta per il sesso + il fatto che si è modificato il file singles.txt
-+ breve commento su eventuali extra
-+ intestazione generale consegne 
+Federico Serra matricola 898925
+Corso di Tecnologie Web
+    Consegna esercizio 4 di laboratorio: PHP e forms HTML
+    - aggiunta l'opzione di scelta del sesso ricercato dall'utente ("politically  correct").
+      Per questo motivo si è modificato il file singles.txt, aggiungendo un campo [M|F|B]
+      che indica le proprio preferenze (la B sta per both). Il campo viene scelto al 
+      momento dell'iscrizione ed è messo di default a both genders
+    - come da consegna non sono stati implementati controlli sull'input (es.: login inesistente)
 -->
 <?php include "top.html"; ?>
 

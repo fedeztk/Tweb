@@ -1,3 +1,6 @@
+<!--
+Unordered list showing matches found for user logged via matches.php
+-->
 <?php include "top.html";
 $name = $_REQUEST["name"];
 
@@ -25,7 +28,7 @@ function check_compatibility($user_info, $line)
         $user_max_age, $user_pref_gender
     ) = explode(",", trim($user_info));
 
-    # exit if users are the same
+    # exit if users and candidate are the same
     if (!strcmp($user_name, $candidate_name))
         return 0;
 

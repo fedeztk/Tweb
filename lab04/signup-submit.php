@@ -1,3 +1,6 @@
+<!--
+Successful sign up page where it is possible to go to matches.php
+-->
 <?php
 include "top.html";
 $name = $_REQUEST["name"];

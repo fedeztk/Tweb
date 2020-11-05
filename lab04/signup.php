@@ -1,3 +1,6 @@
+<!--
+Sign up page for NerdLuv. No input checking implemented
+-->
 <?php include "top.html"; ?>
 
 <form action="signup-submit.php" method="post">
@@ -5,20 +8,20 @@
 
         <legend>New User Singup:</legend>
         <label class="left"> <strong>Name:</strong> </label>
-        <input name="name" type="text" size="16" maxlength="16"></input>
+        <input name="name" type="text" size="16" maxlength="16">
         <br />
 
         <label class="left"> <strong>Gender:</strong> </label>
         <input name="gender" type="radio" value="M" /> Male
-        <input name="gender" type="radio" value="F" checked="checked" /> Female
+        <input name="gender" type="radio" value="F" checked="checked"> Female
         <br />
 
         <label class="left"> <strong>Age:</strong> </label>
-        <input name="age" type="text" size="6" maxlength="2"></input>
+        <input name="age" type="text" size="6" maxlength="2">
         <br />
 
         <label class="left"> <strong>Personality type:</strong> </label>
-        <input name="jung_type" type="text" size="6" maxlength="4"></input>
+        <input name="jung_type" type="text" size="6" maxlength="4">
         (<a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">Don't know your type?</a>)
         <br />
 
@@ -31,15 +34,15 @@
         <br />
 
         <label class="left"> <strong>Seeking age:</strong> </label>
-        <input name="min_age" type="text" placeholder="20" size="6" maxlength="2"></input>
+        <input name="min_age" type="text" placeholder="20" size="6" maxlength="2">
         to
-        <input name="max_age" type="text" placeholder="45" size="6" maxlength="2"></input>
+        <input name="max_age" type="text" placeholder="45" size="6" maxlength="2">
         <br />
 
         <label><strong>Looking for...</strong></label>
-        <input type="radio" value="B" name="pref_gender" checked="checked" />Both genders
-        <input type="radio" value="M" name="pref_gender" />Male
-        <input type="radio" value="F" name="pref_gender" />Female
+        <input type="radio" value="B" name="pref_gender" checked="checked">Both genders
+        <input type="radio" value="M" name="pref_gender">Male
+        <input type="radio" value="F" name="pref_gender">Female
 
         <p>
             <input type="submit" value="Sign Up">
