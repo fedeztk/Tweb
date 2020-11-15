@@ -1,9 +1,12 @@
+/* fifteen.html stylesheet */
+
 body {
   text-align: center;
   font-size: 14pt;
   font-family: cursive;
 }
 
+/* box that contains all tiles */
 #puzzlearea {
   width: 400px;
   height: 400px;
@@ -11,6 +14,7 @@ body {
   position: relative;
 }
 
+/* single tile */
 #puzzlearea div {
   border: black solid 5px;
   color: black;
@@ -21,24 +25,26 @@ body {
   background-image: url("./background.jpg");
 }
 
+/* hovered tile */
 #puzzlearea div.hoveredTile {
   border: red solid 5px;
   color: red;
 }
 
-#r0c0 { margin: 0px 0px 0px 0px; }
-#r0c1 { margin: 0px 0px 0px 100px; }
-#r0c2 { margin: 0px 0px 0px 200px; }
-#r0c3 { margin: 0px 0px 0px 300px; }
-#r1c0 { margin: 100px 0px 0px 0px; }
+/* tile's position based on its current id */
+#r0c0 { margin: 0px   0px 0px 0px;   } /* first row */
+#r0c1 { margin: 0px   0px 0px 100px; }
+#r0c2 { margin: 0px   0px 0px 200px; }
+#r0c3 { margin: 0px   0px 0px 300px; }
+#r1c0 { margin: 100px 0px 0px 0px;   } /* second row */
 #r1c1 { margin: 100px 0px 0px 100px; }
 #r1c2 { margin: 100px 0px 0px 200px; }
 #r1c3 { margin: 100px 0px 0px 300px; }
-#r2c0 { margin: 200px 0px 0px 0px; }
+#r2c0 { margin: 200px 0px 0px 0px;   } /* third row */
 #r2c1 { margin: 200px 0px 0px 100px; }
 #r2c2 { margin: 200px 0px 0px 200px; }
 #r2c3 { margin: 200px 0px 0px 300px; }
-#r3c0 { margin: 300px 0px 0px 0px; }
+#r3c0 { margin: 300px 0px 0px 0px;   } /* fourth row */
 #r3c1 { margin: 300px 0px 0px 100px; }
 #r3c2 { margin: 300px 0px 0px 200px; }
 #r3c3 { margin: 300px 0px 0px 300px; }
