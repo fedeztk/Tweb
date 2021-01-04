@@ -1,0 +1,120 @@
+/* overwrite navbar style by hiding everything except logo */
+#navbar > a:not(:first-child),
+#navbar #drop > a {
+  display: none;
+}
+
+#userWrap {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #e9ecef;
+  padding: 15px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 10%;
+}
+
+#boxWrap {
+  /* padding: 15px 15px 15px 15px; */
+  /* serve solo al display di uno alla volta */
+}
+
+/* questo oppure l'hide del signup */
+/* .boxWrap > div:last-child { */
+/*   display: none; */
+/* } */
+
+.selector {
+  list-style: none;
+  padding: inherit;
+}
+
+.selector li a {
+  padding: 5px 0px 5px 0px;
+  display: block;
+  text-decoration: none;
+  font-size: 14pt;
+  float: left;
+  width: 50%;
+  text-align: center;
+  transition: 0.5s ease;
+  background: #6c757d;
+  opacity: 0.5;
+}
+
+.selector li a,
+input[name="submit"] {
+  cursor: pointer;
+  color: #f4f4f9;
+}
+
+.selector li a:hover,
+input[name="submit"]:hover,
+.selector .active a,
+input[name="submit"] {
+  font-weight: bold;
+  background: firebrick;
+}
+
+.selector li a:hover,
+input[name="submit"]:hover {
+  opacity: 0.8;
+}
+
+.selector .active a,
+input[name="submit"] {
+  opacity: 1;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20pt;
+}
+
+dl {
+  padding: 0px 15px 15px 15px;
+  margin: auto;
+  font-size: 14pt;
+}
+
+dt {
+  text-align: left;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+dd {
+  margin: auto;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 5px 5px 5px;
+  line-height: normal;
+  border: 1px #dee2e6 solid;
+  border-radius: 0px;
+}
+
+input:focus {
+  outline: solid 2px #6c757d;
+  transition: all 200ms linear;
+}
+
+input[name="submit"] {
+  transition: all 200ms linear;
+  font-weight: bold;
+  /* border: 1px solid #adb5bd;; */
+}
+
+input[name="submit"]:focus {
+  outline: none;
+}
+
+hr {
+  width: 85%;
+  border: 0.5px solid #dee2e6;
+}

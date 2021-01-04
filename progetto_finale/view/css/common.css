@@ -1,0 +1,95 @@
+* {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 14pt;
+}
+
+#frame {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  /* overflow: visible; */
+  min-height: 500px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* width: 90%; */
+  margin: auto;
+  height: 100%;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+
+
+
+h1 {
+  text-align: center;
+  font-family: "Roboto Mono", Helvetica, sans-serif;
+  font-size: 24pt;
+
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text 4s steps(39, end) 1s 1 normal both,
+    animated-cursor 600ms steps(39, end) infinite;
+  margin: 0 auto;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+a {
+  color: dodgerblue;
+}
+
+a:visited {
+  color: darkmagenta;
+}
+
+a:hover {
+  color: darkgoldenrod;
+}
+
+/* feedback message */
+
+#flash {
+  /* margin: 30px; */
+  padding: 12px;
+  text-align: center;
+}
+
+#flash.warning {
+  background-color: #e9c46a;
+}
+
+#flash.greeting {
+  background-color: lavender;
+}
+
+#flash.success {
+  background-color: lightgreen;
+}
+
+/* end feedback message */

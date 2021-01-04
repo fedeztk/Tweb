@@ -1,0 +1,37 @@
+/* style for home page, fading images */
+#container > div {
+  margin: auto;
+  position: relative;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  /* display:flex; */
+  /* flex-direction:column; */
+  /* vertical-align: middle; */
+  z-index: -1;
+}
+
+#container > div > img {
+  position: absolute;
+  max-width: 470px;
+  max-height: 470px;
+  /* left: 50%; */
+  /* position: relative; */
+  /* top: 7%; */
+  /* margin:auto; */
+  /* max-width: 50%; */
+  /* max-height: 50%; */
+  /* border: 2px solid aqua; */
+}
+
+#container {
+  /* max-width: 90%; */
+  margin: auto;
+}
+
+#container > p {
+  float: left;
+  width: 50%;
+  margin-top: 10%;
+  vertical-align: bottom;
+}

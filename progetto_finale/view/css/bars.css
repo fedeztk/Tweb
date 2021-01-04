@@ -1,0 +1,176 @@
+/* footer begin */
+
+#footerWrap {
+  width: 100%;
+  /* height: 7%; */
+  position: absolute;
+  /* position: relative; */
+  /* position: absolute; */
+  /* position: static; */
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  /* overflow: hidden; */
+  /* margin-top: 7%; */
+
+}
+
+#footer {
+  background-color: #f4f4f9;
+  padding: 2px;
+  margin: 0.5%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#w3c {
+  padding-top: 17px;
+}
+
+/* footer end */
+
+/* navbar begin  */
+/* note: login page overrides the style */
+
+#navbarWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* margin: 0; */
+ clear:both; /* overflow: hidden; */
+  overflow: hidden;
+  background: white;
+}
+
+#navbar {
+  /* padding: 15px; */
+  background-color: #f4f4f9;
+  padding: 2px;
+  margin: 0.5%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  /* height: 5%; */
+  /* overflow: hidden; */
+}
+
+#navbar > a,
+#navbar #drop > a {
+  text-decoration: none;
+  color: firebrick;
+  /* background: blanchedalmond; */
+  /* padding: 10px; */
+  /* padding: 2% 0% 2% 0%; */
+  display: inline-block;
+  padding: 15px 30px 15px 30px;
+  border-radius: 12px;
+  font-size: 15pt;
+  transition: all 0.4s ease;
+}
+
+#navbar > a:hover:not(:first-child),
+#navbar #drop > a:hover {
+  background: firebrick;
+  color: #f4f4f9;
+  /* opacity: 0.7; */
+  border-radius: 12px;
+  margin: 10px;
+  padding: 5px 20px 5px 20px;
+  /* font-weight: bold; */
+  transition: all 0.5s ease;
+}
+
+#navbar > a:first-child {
+  padding: 10px 0 10px 0;
+}
+
+#navbar > a:first-child:hover {
+  opacity: 0.7;
+}
+
+a #logoMain {
+  /* height: 100px; */
+  background-color: firebrick;
+  border-radius: 12px;
+  /* position: relative; */
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  margin-right: 0;
+  /* border-radius: 25%; */
+}
+
+#logoInit {
+  display: inline-block;
+  color: #f4f4f9;
+  /* font-size: 20pt; */
+  /* vertical-align: initial; */
+  /* padding: 10px; */
+}
+
+#logoComplete {
+  display: inline-block;
+  color: #f4f4f9;
+}
+
+/* adaptive top bar */
+@media (max-width: 750px) {
+  #footer > #w3c,
+  #logoComplete,
+  #navbar span {
+    display: none;
+  }
+  /* #logoMain { */
+  /*   border-radius: 25%; */
+  /*   /\* padding: 10px; *\/ */
+  /* } */
+}
+
+/* dropdown */
+
+#drop {
+  overflow: hidden;
+  float: left;
+  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit; /* Important for vertical align on mobile phones */
+}
+
+#drop:hover #dropContent {
+  display: block;
+  /* transition: all 0.5 ease; */
+}
+
+#drop:click #dropContent {
+  display: block;
+}
+#dropContent li,
+#dropContent li a {
+  float: none;
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  /* font-size: 30pt; */
+  cursor: pointer;
+}
+
+#dropContent li:hover,
+#dropContent li a:hover {
+  color: firebrick;
+}
+
+#dropContent {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  border-radius: 12px;
+  /* min-height: 1160px; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: all 0.5 ease;
+  position: fixed;
+}
+
+/* navbar end  */
