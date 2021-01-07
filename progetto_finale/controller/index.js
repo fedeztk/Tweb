@@ -29,7 +29,7 @@ function buildHome(res) {
     }).appendTo('#pics');
   });
 
-  setInterval(fadeNewImg, 3000);
+  setInterval(fadeNewImg, 5000);
 }
 
 function fadeNewImg() {
@@ -37,5 +37,5 @@ function fadeNewImg() {
   currImg.hide();
   currImg.remove();
   $('#pics').append(currImg);
-  currImg.fadeIn(1500)
+  currImg.fadeIn(1000)
 };

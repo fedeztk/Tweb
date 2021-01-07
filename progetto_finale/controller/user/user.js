@@ -37,8 +37,8 @@ $(function() {
       success: function(res) {
         if (res.status) {
           location.reload();
-          // $("#flash").attr("class", "success"); /FIXME
-          // $("#flash").html(res.msg).show();
+          $("#flash").attr("class", "success"); //FIXME
+          $("#flash").html(res.msg).show();
         } else {
           $("#flash").html(res.msg);
           $("#flash").show();
@@ -60,6 +60,7 @@ $(function() {
         if (res.status) {
           $(window.location).attr("href", "index.php");
         } else {
+          console.log(res.status +""+res.msg);
           $("#flash").html(res.msg);
           $("#flash").show();
         }

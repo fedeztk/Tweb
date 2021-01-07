@@ -16,6 +16,7 @@
 }
 
 #footer {
+  height: 150px;
   background-color: #f4f4f9;
   padding: 2px;
   margin: 0.5%;
@@ -34,7 +35,7 @@
 /* note: login page overrides the style */
 
 #navbarWrap {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
