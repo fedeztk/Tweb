@@ -8,9 +8,8 @@ $(function() {
     datatype: "json",
     data: "",
     success: buildHome,
-    error: function(res) {
-      $(window.location).attr('href', 'user.php');
-      console.log(res);
+    error: function() {
+      "Impossibile caricare l'home page"
     }
   });
 });
@@ -22,20 +21,45 @@ function buildHome(res) {
 
   //build of dom for random images
 
-  res.imgs.forEach(function(img) {
-    jQuery("<img/>", {
-      src: "../img/artwork/" + img["id"] + ".jpg",
-      alt: img["name"],
-    }).appendTo('#pics');
-  });
+  // res.imgs.forEach(function(img) {
+  //   jQuery("<img/>", {
+  //     src: "../img/artwork/" + img["id"] + ".jpg",
+  //     alt: img["name"],
+  //   }).appendTo('#pics');
+  // });
 
-  setInterval(fadeNewImg, 5000);
+//   var index=0, images=['1', '2'];
+// setInterval(function() {
+//    $("#container>#pics").animate({ opacity: 0 }, 500, function() {
+//      $("#container>#pics").css('background-image', 'url(../img/artwork/'+images[++index]+'.jpg)');
+//      $("#container>#pics").animate({ opacity: 1 }, 500, function() {
+//        if(index === images.length) index = 0;
+//      });
+//    });
+// }, 6000);
+//   var images = ['../img/artwork/1.jpg', '../img/artwork/2.jpg', '../img/artwork/3.jpg'],
+//     index  = 0,
+//     $top   = $('#container>#pics');
+
+// setInterval(function() {
+//    $top.animate({ opacity: 0 }, 500, function() {
+//      $top.css('background-image', 'url('+images[++index]+')');
+//      $top.animate({ opacity: 1 }, 500, function() {
+//        if(index === images.length) index = 0;
+//      });
+//    });
+// }, 3000);
 }
 
-function fadeNewImg() {
-  currImg = $('#pics img:first');
-  currImg.hide();
-  currImg.remove();
-  $('#pics').append(currImg);
-  currImg.fadeIn(1000)
-};
+function fadeNewImg(){
+  $("#container>#pics").css("background-image", 'url(../img/artwork/1.jpg)').fadeIn(1500);
+}
+
+
+// function fadeNewImg() {
+//   currImg = $('#pics img:first');
+//   currImg.hide();
+//   currImg.remove();
+//   $('#pics').append(currImg);
+//   currImg.fadeIn(1500);
+// };

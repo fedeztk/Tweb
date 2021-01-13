@@ -24,6 +24,7 @@ if (!$_POST['email'] || !$_POST['password']) {
                 session_regenerate_id(true);
 
             $_SESSION['name'] = $user['name'];
+            $_SESSION['email']=$email;
 
             //success
             echo json_encode(array('status' => true, 'msg' => $email));
@@ -40,7 +41,7 @@ function validatePassword($email, $password)
 {
     $db = connectToDB();
     $logUserQ = $db->prepare('SELECT password FROM user WHERE email = ?');
-    $logUserQ->execute(array($db->quote($email)));
+    $logUserQ->execute(array($email));
     $user = $logUserQ->fetch(PDO::FETCH_ASSOC);
 
     if ($user)

@@ -1,11 +1,6 @@
 <?php
-// login utilities
-if (!isset($_SESSION)) {
+if (!isset($_SESSION))
     session_start();
-}
-
-if (!isset($_SESSION['name']))
-    header('location: ../../view/user.php');
 
 function connectToDB()
 {

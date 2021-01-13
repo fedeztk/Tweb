@@ -35,7 +35,7 @@
 /* note: login page overrides the style */
 
 #navbarWrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -43,6 +43,7 @@
  clear:both; /* overflow: hidden; */
   overflow: hidden;
   background: white;
+  z-index: 1;
 }
 
 #navbar {

@@ -36,10 +36,9 @@ $(function() {
       data: "username=" + $("#signup input[name='username']").val() + "&email=" + $("#signup input[name='email']").val() + "&pwd=" + $("#signup input[type='password']").val(),
       success: function(res) {
         if (res.status) {
-          location.reload();
-          $("#flash").attr("class", "success"); //FIXME
-          $("#flash").html(res.msg).show();
+          $(window.location).attr("href", "user.php");
         } else {
+          $("#flash").addClass("warning");
           $("#flash").html(res.msg);
           $("#flash").show();
         }
@@ -60,7 +59,8 @@ $(function() {
         if (res.status) {
           $(window.location).attr("href", "index.php");
         } else {
-          console.log(res.status +""+res.msg);
+          console.log(res.status + "" + res.msg);
+          $("#flash").addClass("warning");
           $("#flash").html(res.msg);
           $("#flash").show();
         }

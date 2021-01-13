@@ -1,0 +1,71 @@
+#formWrap *{
+  box-sizing: border-box;
+}
+
+#formWrap {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #e9ecef;
+  padding: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 20pt;
+}
+
+dl {
+  padding: 0px 15px 15px 15px;
+  margin: auto;
+  font-size: 14pt;
+}
+
+dt {
+  text-align: left;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+dd {
+  margin: auto;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+  line-height: normal;
+  border: 1px #dee2e6 solid;
+  border-radius: 0px;
+}
+
+input:focus {
+  outline: solid 2px #6c757d;
+  transition: all 200ms linear;
+}
+
+input[name="submit"] {
+  cursor: pointer;
+  color: #f4f4f9;
+  font-weight: bold;
+  transition: all 200ms linear;
+}
+
+input[name="submit"]:hover,
+input[name="submit"] {
+  font-weight: bold;
+  background: firebrick;
+}
+
+input[name="submit"]:focus {
+  outline: none;
+}
+
+input[name="submit"]:hover {
+  opacity: 0.8;
+}

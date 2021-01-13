@@ -1,11 +1,13 @@
 <?php include("top.html") ?>
-<script src="../controller/user/user.js" type="text/javascript"></script>
+<script src="../controller/user.js" type="text/javascript"></script>
+<!-- common style for form-boxes -->
+<link href="css/boxes.css" type="text/css" rel="stylesheet">
 <link href="css/user.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
     <?php include("navbar.html") ?>
-    <div id="userWrap">
+    <div id="formWrap">
         <h1>Benvenut* su BB ceramics</h1>
         <ul class="selector">
             <li class="field active"><a href="#login">Entra</a></li>

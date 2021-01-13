@@ -1,6 +1,7 @@
 //common js for every page
 //unavaiable in user.php
 $(function () {
+  $("")
   $("#dropContent li:last-child").on("click", function () {
     $.get({
       url: "../model/user/logout.php",

@@ -81,10 +81,19 @@ a:hover {
 /* feedback message */
 
 #flash {
-  /* margin: 30px; */
+/* margin: 30px; */
+/* width: 50%; */
   padding: 12px;
   text-align: center;
   display: none;
+  z-index: 2;
+  cursor: crosshair;
+  position: fixed;
+  top: 63px;
+  left: 5%;
+  /* right: 10%; */
+  width: 90%;
+  /* transform: translate(0, -50%); */
 }
 
 #flash.warning {
@@ -97,6 +106,8 @@ a:hover {
 
 #flash.success {
   background-color: lightgreen;
+  /* position: fixed; */
+  /* top: 50%; */
 }
 
 /* end feedback message */

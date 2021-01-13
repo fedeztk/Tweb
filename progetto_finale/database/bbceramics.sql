@@ -1,7 +1,7 @@
 -- bbceramics database creation
 
-CREATE DATABASE IF NOT EXISTS `bbceramics` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `bbceramics`;
+CREATE DATABASE IF NOT EXISTS bbceramics DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE bbceramics;
 
 -- user
 
@@ -65,6 +65,34 @@ VALUES
 ("Foglia", "ciotola", "terra rossa", "rosso", 10.5, 2.5, 5.5, true, 10),
 ("Foglia acero", "ciotola", "terra rossa", "rosso", 11.5, 3, 10, true, 10),
 
-("Les ampurs", "vaso", "terra rossa", "terra cotta", 34.5, 13.5, 12.5, false, 120),
+("Les amours", "vaso", "terra rossa", "terra cotta", 34.5, 13.5, 12.5, false, 120),
 
 ("Ovale con le zampe", "piatto", "terra bianca", "bianco", 25.5, 5, 17, true, 40);
+
+-- cart
+
+DROP TABLE IF EXISTS cart;
+CREATE TABLE cart (
+  id int NOT NULL,
+  email varchar (63) NOT NULL,
+  quantity int NOT NULL DEFAULT 1,
+  PRIMARY KEY (email, id),
+  FOREIGN KEY (email) REFERENCES user(email) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (id) REFERENCES artwork(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- userOrder
+
+DROP TABLE IF EXISTS userOrder;
+CREATE TABLE userOrder (
+  email varchar (63) NOT NULL,
+  street varchar(127) NOT NULL,
+  prov varchar(127) NOT NULL,
+  city varchar(127) NOT NULL,
+  id varchar(255) NOT NULL,
+  quantity varchar(255) NOT NULL,
+  orderDate datetime NOT NULL,
+  total int NOT NULL,
+  FOREIGN KEY (email) REFERENCES user(email) ON DELETE CASCADE ON UPDATE CASCADE,
+  PRIMARY KEY (email, orderDate)
+);

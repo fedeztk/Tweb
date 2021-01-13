@@ -1,6 +1,8 @@
 <!-- home page BB -->
 
 <?php include("top.html");
+
+include("../model/common.php");
 ?>
 <link href="css/index.css" type="text/css" rel="stylesheet">
 <script src="../controller/index.js" type="text/javascript"></script>
