@@ -1,4 +1,5 @@
 <?php
+// get info of currently clicked product
 include("../user/util.php");
 
 header("Content-type: application/json");

@@ -1,7 +1,6 @@
 // home page script
+// get  3 random images from artwork and cycle through them
 $(function() {
-  // check login status, and if logged, gets the user name, otherwise redirect
-  // to user.php
   $("#flash").hide();
   $.get({
     url: "../model/getHomePage.php",
@@ -9,57 +8,28 @@ $(function() {
     data: "",
     success: buildHome,
     error: function() {
-      "Impossibile caricare l'home page"
+      $("#flash").attr("class", "warning");
+      $("#flash").html("Ci scusiamo per l'incoveniente, riprovare più tardi").show();
     }
   });
 });
 
 function buildHome(res) {
-
+  //greet the user
   $("#flash").attr("class", "greeting");
-  $("#flash").html("Bentornat* su BB Ceramics " + res.name).show().delay(3000).fadeOut(3000);
+  $("#flash").html("Bentornat* su BB Ceramics " + res.name).show().delay(3000).fadeOut(1500);
 
-  //build of dom for random images
-
-  // res.imgs.forEach(function(img) {
-  //   jQuery("<img/>", {
-  //     src: "../img/artwork/" + img["id"] + ".jpg",
-  //     alt: img["name"],
-  //   }).appendTo('#pics');
-  // });
-
-//   var index=0, images=['1', '2'];
-// setInterval(function() {
-//    $("#container>#pics").animate({ opacity: 0 }, 500, function() {
-//      $("#container>#pics").css('background-image', 'url(../img/artwork/'+images[++index]+'.jpg)');
-//      $("#container>#pics").animate({ opacity: 1 }, 500, function() {
-//        if(index === images.length) index = 0;
-//      });
-//    });
-// }, 6000);
-//   var images = ['../img/artwork/1.jpg', '../img/artwork/2.jpg', '../img/artwork/3.jpg'],
-//     index  = 0,
-//     $top   = $('#container>#pics');
-
-// setInterval(function() {
-//    $top.animate({ opacity: 0 }, 500, function() {
-//      $top.css('background-image', 'url('+images[++index]+')');
-//      $top.animate({ opacity: 1 }, 500, function() {
-//        if(index === images.length) index = 0;
-//      });
-//    });
-// }, 3000);
+  //start the images loop
+  fadeNewImg(res.imgs, 0);
 }
 
-function fadeNewImg(){
-  $("#container>#pics").css("background-image", 'url(../img/artwork/1.jpg)').fadeIn(1500);
+function fadeNewImg(res, idx) {
+  $('#pics').fadeIn(1500).html('<img src="../img/artwork/' + res[idx]['id'] + '.jpg" alt="'+res[idx]['name']+'" />').delay(3000)
+    .fadeOut(1500, function() {
+      idx++;
+      if (idx == res.length)
+        fadeNewImg(res, 0);
+      else
+        fadeNewImg(res, idx);
+    });
 }
-
-
-// function fadeNewImg() {
-//   currImg = $('#pics img:first');
-//   currImg.hide();
-//   currImg.remove();
-//   $('#pics').append(currImg);
-//   currImg.fadeIn(1500);
-// };

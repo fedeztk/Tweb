@@ -1,4 +1,5 @@
 <?php
+// remove item from cart
 include("../user/util.php");
 
 header("Content-type: application/json");
@@ -8,7 +9,7 @@ $id = $_GET["id"];
 
 $db = connectToDB();
 
-$removeQ = $db->prepare('DELETE FROM cart WHERE id=? AND email=?');
+$removeQ = $db->prepare('DELETE FROM cart WHERE id = ? AND email = ?');
 
 $removeQ->execute(array($id, $email));
 

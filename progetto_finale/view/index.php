@@ -1,4 +1,6 @@
-<!-- home page BB -->
+<!-- BB Ceramics, sito di e-commerce per pezzi di ceramica artigianale
+     Autore: Federico Serra
+     Home page sito -->
 
 <?php include("top.html");
 
@@ -10,7 +12,6 @@ include("../model/common.php");
 
 <body>
     <?php include("navbar.html") ?>
-    <div id="container">
 
     <div id="text">
     <h1>Home Page BB Ceramics</h1>
@@ -18,5 +19,4 @@ include("../model/common.php");
     </div>
     <div id="pics"></div>
 
-    </div>
     <?php include("bottom.html") ?>

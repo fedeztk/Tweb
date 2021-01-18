@@ -1,4 +1,7 @@
 <?php
+// util file used by cart and purchase
+
+// get total amount of euros of all items in user's cart
 function getTotal()
 {
     $db = connectToDB();
@@ -17,6 +20,7 @@ function getTotal()
     return $total;
 }
 
+// get all the products in user's cart
 function getProducts()
 {
     $email = $_SESSION["email"];

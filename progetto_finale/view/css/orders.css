@@ -1,3 +1,5 @@
+/* style of order page */
+
 .orderList {
   width: 50%;
   max-width: 650px;
@@ -8,35 +10,45 @@
   border-radius: 5px;
 }
 
+/* trash image */
+#frame img {
+  position: fixed;
+  width: 50px;
+  right: 20%;
+  top: 50vh;
+  padding: 20px;
+}
+
 .order {
   padding: 20px 30px;
   border-top: 1px solid #e1e8ee;
   border-bottom: 1px solid #e1e8ee;
+  cursor: pointer;
 }
 
-h2,
-p {
+.orderList h2,
+.orderList p {
   text-align: center;
 }
 
-h2 {
+.orderList h2 {
   font-size: 20pt;
   padding: 20px 30px 0 30px;
 }
 
-p{
+.orderList p {
   padding: 20px 30px 30px 0;
 }
 
-.orderList ul{
+.orderList ul {
   list-style-type: none;
 }
 
-.orderList ul li:first-child{
+.orderList ul li:first-child {
   font-size: 18pt;
 }
 
-.orderList ul li{
+.orderList ul li {
   margin: 20px 0;
 }
 
@@ -44,10 +56,17 @@ p{
   .orderList {
     width: 80%;
   }
+  #frame img {
+    right: 1%;
+  }
 }
 
-@media screen and (max-width: 600px) {
-  .orderList {
-    width: 100%;
-  }
+/* style of dragged element */
+.ui-draggable-dragging {
+  background-color: #e9ecef;
+}
+
+/* cursor pointer when dragging hovering the trash image */
+.hovered {
+  cursor: pointer;
 }

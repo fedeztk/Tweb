@@ -1,5 +1,5 @@
 <?php
-
+// login the user if registered
 include("util.php");
 
 header("Content-type: application/json");
@@ -27,25 +27,11 @@ if (!$_POST['email'] || !$_POST['password']) {
             $_SESSION['email']=$email;
 
             //success
-            echo json_encode(array('status' => true, 'msg' => $email));
+            echo json_encode(array('status' => true));
         } else { //failure
             echo json_encode(array('status' => false, 'msg' => 'L\'e-mail o la password inseriti non sono validi, ricontrollare'));
         }
     } else { //failure
             echo json_encode(array('status' => false, 'msg' => 'L\'e-mail non risulta associata ad alcun account'));
     }
-}
-
-//TODO remove
-function validatePassword($email, $password)
-{
-    $db = connectToDB();
-    $logUserQ = $db->prepare('SELECT password FROM user WHERE email = ?');
-    $logUserQ->execute(array($email));
-    $user = $logUserQ->fetch(PDO::FETCH_ASSOC);
-
-    if ($user)
-        return password_verify($password, $user['password']);
-    else
-        return false;
 }

@@ -1,7 +1,7 @@
 <?php
+// signup new user if fields are set and the email is not in use
 
 include("util.php");
-
 
 header("Content-type: application/json");
 
@@ -11,7 +11,8 @@ if (!$_POST['username'] || !$_POST['email'] || !$_POST['pwd']) {
     $name = $_POST['username'];
     $password = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    //se l'email supera la validazione dopo aver eliminato i caratteri illegali
+
+    //if the email is valid
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         try {
             $db = connectToDB();
@@ -26,6 +27,6 @@ if (!$_POST['username'] || !$_POST['email'] || !$_POST['pwd']) {
             }
         }
     } else {
-        echo json_encode(array('status' => false, 'msg' => 'L\'mail inserita non è valida, controllare.'));
+        echo json_encode(array('status' => false, 'msg' => 'L\'email inserita non è valida, controllare.'));
     }
 }

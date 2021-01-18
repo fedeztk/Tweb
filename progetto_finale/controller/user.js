@@ -1,56 +1,60 @@
-//login script
+//login/signup script
 $(function() {
-
-  $("#flash").hide();
   //default to login
   $("#signup").hide();
 
+
   // signup
+
+  // verify correspondance of the passwords
   $("#signup input[name='password'], #signup input[name='rePassword']").keyup(verifyPwd);
 
-  $("#signup input[name='rePassword']").blur(function() {
-    if ($("#signup input[name='password']").val().length < 6) {
-      $("#pwdLenCheck").html("<br>(minimo 6 caratteri)");
-      $("#pwdLenCheck").css("color", "red");
-      $("#pwdLenCheck").slideDown(400);
-    } else {
-      $("#pwdLenCheck").slideUp(400);
-    }
-  });
+  // check if password has at least 6 characters
+  $("#signup input[name='password']").keyup(verifyLength);
 
+  // submit registration request
   $("#signup input[name='submit']").on("click", function(e) {
+    e.preventDefault();
+
     if ($("#signup input[name='email']").val() == "" || $("#signup input[name='username']").val() == "" ||
       $("#signup input[name='password']").val() == "" || $("#signup input[name='rePassword']").val() == "") {
+      $("#flash").attr("class", "warning");
+      $("#flash").text("Compila tutti i campi per completare la registrazione!").show();
 
-      $("#flash").show();
-      $("#flash").text("Compila tutti i campi per completare la registrazione!");
-      e.preventDefault();
+    } else if (!verifyPwd()) {
+      $("#flash").attr("class", "warning");
+      $("#flash").text("Le password non corrispondono!").show();
+
+    } else if (!verifyLength()) {
+      $("#flash").attr("class", "warning");
+      $("#flash").text("La password deve contenere almeno 6 caratteri").show();
 
     } else {
       $("#flash").hide();
-    }
-
-    $.post({
-      url: "../model/user/signup.php",
-      datatype: "json",
-      data: "username=" + $("#signup input[name='username']").val() + "&email=" + $("#signup input[name='email']").val() + "&pwd=" + $("#signup input[type='password']").val(),
-      success: function(res) {
-        if (res.status) {
-          $(window.location).attr("href", "user.php");
-        } else {
-          $("#flash").addClass("warning");
-          $("#flash").html(res.msg);
-          $("#flash").show();
+      $.post({
+        url: "../model/user/signup.php",
+        datatype: "json",
+        data: "username=" + $("#signup input[name='username']").val() + "&email=" + $("#signup input[name='email']").val() + "&pwd=" + $("#signup input[type='password']").val(),
+        success: function(res) {
+          if (res.status) {
+            $(window.location).attr("href", "user.php");
+          } else {
+            $("#flash").addClass("warning");
+            $("#flash").html(res.msg).show();
+          }
+        },
+        error: function() {
+          console.log('Errore: impossibile effettuare la richiesta per la registrazione');
         }
-      },
-      error: function() {
-        console.log('Errore: impossibile effettuare la richiesta per la registrazione');
-      }
-    });
+      });
+    }
   });
 
+
   // login
+
   $("#login input[name='submit']").on("click", function(e) {
+    e.preventDefault();
     $.post({
       url: "../model/user/login.php",
       datatype: "json",
@@ -59,24 +63,18 @@ $(function() {
         if (res.status) {
           $(window.location).attr("href", "index.php");
         } else {
-          console.log(res.status + "" + res.msg);
           $("#flash").addClass("warning");
-          $("#flash").html(res.msg);
-          $("#flash").show();
+          $("#flash").text(res.msg).show();
         }
       },
-      error: function(res) {
-        console.log('Errore, impossibile effettuare il login:' + res.msg); //FIXME
+      error: function() {
+        console.log("Impossibile effettuare la richiesta di login");
       },
     });
   });
 
-
-  // misc
   // switch between login and signup
-  $(".selector a").on("click", function(e) {
-    // e.preventDefault();
-
+  $(".selector a").on("click", function() {
     // change "buttons" color
     $(this).parent().addClass("active");
     $(this).parent().siblings().removeClass("active");
@@ -87,17 +85,17 @@ $(function() {
     $("#flash").hide();
     $(target).fadeIn(500);
   });
-
 });
 
-
-// signup
-//verify passowrds correspondance
+//verify passwords correspondance
 function verifyPwd() {
+  // if at least one of them contains text
   if (!($("#signup input[name='password']").val() == "" && $("#signup input[name='rePassword']").val() == "")) {
+    // if the fields are the same
     if ($("#signup input[name='password']").val() == $("#signup input[name='rePassword']").val()) {
       $("#pwdVerify").html(" &#10004;");
       $("#pwdVerify").css("color", "green");
+      return true;
     } else {
       $("#pwdVerify").html(" &#10008;");
       $("#pwdVerify").css("color", "red");
@@ -106,10 +104,17 @@ function verifyPwd() {
   } else {
     $("#pwdVerify").hide();
   }
+  return false;
 }
 
-//TODO
-function isEmail(email) {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
+function verifyLength() {
+  if ($("#signup input[name='password']").val().length < 6) {
+    $("#pwdLenCheck").html("<br>(minimo 6 caratteri)");
+    $("#pwdLenCheck").css("color", "red");
+    $("#pwdLenCheck").slideDown(400);
+    return false;
+  } else {
+    $("#pwdLenCheck").slideUp(400);
+    return true;
+  }
 }

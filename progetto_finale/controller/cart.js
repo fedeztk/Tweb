@@ -20,8 +20,11 @@ function loadCart() {
   });
 }
 
+// display message if cart is empty
 function buildEmptyCart() {
   $(".cartList").remove();
+  //change top bar cart icon
+  $(".fa-cart-arrow-down").addClass("fa-shopping-cart").removeClass("fa-cart-arrow-down");
   $("<div>").addClass("cartList").append(
     $("<h2>").text("Non c'è ancora niente qui...")
   ).append(
@@ -29,66 +32,20 @@ function buildEmptyCart() {
   ).insertAfter("hr");
 }
 
-
+// get user items currently in cart
 function buildCart(res) {
   $(".cartList").remove();
-  var cartList = $("<div>").addClass("cartList");
-  var total = res.total;
-  res.products.forEach(function(product) {
-    var quantity = $("<span>", {
-      type: "text",
-      name: "currentQuantity",
-      text: product["quantity"],
-    });
-    currentProduct = $("<div>").addClass("product").append(
-      $("<button>", {
-        type: "button",
-        name: "remove",
-        html: "&#x2715",
-      })
-    ).append(
-      $("<img/>", {
-        src: "../img/artwork/" + product["id"] + ".jpg",
-        alt: product["name"],
-      })
-    ).append(
-      $("<span>", {
-        text: product["name"],
-      }).addClass("title")
-    ).append(
-      $("<div>").addClass("quantity").append(
-        $("<button>", {
-          type: "button",
-          name: "minus",
-          text: "-",
-        })
-      ).append(
-        quantity
-      ).append(
-        $("<button>", {
-          type: "button",
-          name: "plus",
-          text: "+",
-        })
-      )
-    ).append(
-      $("<div>").text(product["price"] + "€").addClass("productTotal")
-    );
-    currentProduct.appendTo(cartList);
 
-    currentProduct.find("button[name='plus']").on("click", function() {
-      increaseProduct(product["id"], quantity);
-    });
-    currentProduct.find("button[name='minus']").on("click", function() {
-      decreaseProduct(product["id"], quantity);
-    });
-    currentProduct.find("button[name='remove']").on("click", function() {
-      removeProduct(product["id"]);
-    });
+  var cartList = $("<div>").addClass("cartList");
+
+  res.products.forEach(function(product) {
+    buildProduct(product, cartList);
   });
+
+  // append cart resume + purchase button
   cartList.append(
     $("<div>").addClass("checkout").append(
-      $("<p>").html("Il totale è: <span id=total>" + total + "</span> €")
+      $("<p>").html("Il totale è: <span id=total>" + res.total + "</span> €")
     ).append(
       $("<button>", {
         type: "button",
@@ -96,11 +53,68 @@ function buildCart(res) {
         text: "Procedi al pagamento",
       })
     )).insertAfter("hr");
+
   cartList.find("button[name='confirm']").on("click", function() {
     $(window.location).attr("href", "purchase.php");
   });
 }
 
+// build of each product div
+function buildProduct(product, cartList) {
+  var quantity = $("<span>", {
+    type: "text",
+    name: "currentQuantity",
+    text: product["quantity"],
+  });
+  currentProduct = $("<div>").addClass("product").append(
+    $("<button>", {
+      type: "button",
+      name: "remove",
+      html: "&#x2715",
+    })
+  ).append(
+    $("<img/>", {
+      src: "../img/artwork/" + product["id"] + ".jpg",
+      alt: product["name"],
+    })
+  ).append(
+    $("<span>", {
+      text: product["name"],
+    }).addClass("title")
+  ).append(
+    $("<div>").addClass("quantity").append(
+      $("<button>", {
+        type: "button",
+        name: "minus",
+        text: "-",
+      })
+    ).append(
+      quantity
+    ).append(
+      $("<button>", {
+        type: "button",
+        name: "plus",
+        text: "+",
+      })
+    )
+  ).append(
+    $("<div>").text(product["price"] + "€").addClass("productTotal")
+  );
+  currentProduct.appendTo(cartList);
+
+  // sets on click property for "+", "-" and "X"
+  currentProduct.find("button[name='plus']").on("click", function() {
+    increaseProduct(product["id"], quantity);
+  });
+  currentProduct.find("button[name='minus']").on("click", function() {
+    decreaseProduct(product["id"], quantity);
+  });
+  currentProduct.find("button[name='remove']").on("click", function() {
+    removeProduct(product["id"]);
+  });
+}
+
+// increase amount of choosen item in the cart
 function increaseProduct(id, quantity) {
   $.get({
     url: "../model/cart/updateQuantity.php",
@@ -119,6 +133,7 @@ function increaseProduct(id, quantity) {
   });
 }
 
+// decrease amount of choosen item in the cart
 function decreaseProduct(id, quantity) {
   $.get({
     url: "../model/cart/updateQuantity.php",
@@ -140,6 +155,7 @@ function decreaseProduct(id, quantity) {
   });
 }
 
+// remove choosen item from cart
 function removeProduct(id) {
   $.get({
     url: "../model/cart/removeProduct.php",

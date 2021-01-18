@@ -1,3 +1,6 @@
+/* common style for all "boxes" (form) on the website */
+/* based on the usage of the id "#formWrap" and dl tag */
+
 #formWrap *{
   box-sizing: border-box;
 }
@@ -12,11 +15,6 @@
   margin: auto;
 }
 
-
-h1 {
-  text-align: center;
-  font-size: 20pt;
-}
 
 dl {
   padding: 0px 15px 15px 15px;

@@ -1,7 +1,12 @@
+<!-- BB Ceramics, sito di e-commerce per pezzi di ceramica artigianale
+     Autore: Federico Serra
+     Pagina di pagamento per l'ordine corrente -->
+
 <?php include("top.html");
 include("../model/common.php");
 ?>
 <script src="../controller/purchase.js" type="text/javascript"></script>
+<!-- jquery mask plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <!-- common style for form-boxes -->
 <link href="css/boxes.css" type="text/css" rel="stylesheet">
@@ -12,7 +17,7 @@ include("../model/common.php");
 <body>
     <?php include("navbar.html") ?>
   <div id="formWrap">
-    <h1>Totale: </h1>
+    <h2>Totale: </h2>
       <dl>
           <dt>Intestario della carta:</dt>
           <dd><input type="text" required></dd>

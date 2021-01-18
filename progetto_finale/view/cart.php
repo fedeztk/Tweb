@@ -1,3 +1,7 @@
+<!-- BB Ceramics, sito di e-commerce per pezzi di ceramica artigianale
+     Autore: Federico Serra
+     Pagina di visualizzazione carrello dell'utente -->
+
 <?php include("top.html");
 include("../model/common.php");
 ?>

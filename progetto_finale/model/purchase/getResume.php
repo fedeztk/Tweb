@@ -1,4 +1,5 @@
 <?php
+// get total value of the order and greet the user
 include("../user/util.php");
 include("../cart/util.php");
 

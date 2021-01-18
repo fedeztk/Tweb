@@ -1,33 +1,107 @@
+/* shop style */
+
+/* filter menu style */
+form {
+  margin-top: 20px;
+}
+
+fieldset {
+  background: #f4f4f9;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+legend {
+  background: #e9ecef;
+  padding: 5px;
+  font-size: 16pt;
+  margin-bottom: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+  border: 1px #dee2e6 solid;
+  border-radius: 0px;
+  cursor: pointer;
+  color: #f4f4f9;
+  font-weight: bold;
+  transition: all 200ms linear;
+  font-weight: bold;
+  background: firebrick;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  width: 20%;
+  min-width: 100px;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/* grid gallery style */
 .grid {
   width: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
 
+.card,
+.content,
+.back,
 .grid img {
-  /* width: 31%; */
-  /* height: auto; */
-  /* display: inline-block; */
-  /* padding: 1%; */
+  width: 300px;
+  height: 475px;
 }
 
 .card {
   position: relative;
   display: inline-block;
-  transform-style: preserve-3d;
-  perspective: 1500px;
-  width: 300px;
-  height: 475px;
   padding: 10px;
 }
 
 .content {
   position: relative;
-  width: 300px;
-  height: 475px;
-  /* text-align: center; */
   transition: transform 0.8s;
   transform-style: preserve-3d;
+}
+
+/* show the back of the card */
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.card:hover .content {
+  cursor: pointer;
+}
+
+/* back of the card style */
+.back > h2 {
+  font-size: 16pt;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.back > ul,
+.back > p {
+  padding: 20px;
+  list-style-type: none;
+  margin: auto;
+}
+
+.back > p {
+  text-align: center;
+}
+
+.back > ul > li {
+  padding: 4px;
 }
 
 .back {
@@ -39,64 +113,17 @@
 .back,
 .grid img {
   position: absolute;
-  width: 300px;
-  height: 475px;
-  -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
 
-.flipped {
-  transform: rotateY(180deg);
-}
-
-.card:hover .content {
-  cursor: pointer;
-}
-
-/* FIXME */
-/* @media screen and (max-width: 800px) { */
-/*   .card { */
-/*     width: 47%; */
-/*   } */
-/* } */
-
-/* @media screen and (max-width: 600px) { */
-/*   .card { */
-/*     width: 100%; */
-/*     /\* margin: 0 auto; *\/ */
-/*   } */
-/* } */
-
-.back > h2 {
-  font-size: 16pt;
-  text-align: center;
-  padding-top: 20px;
-  /* display: inline-block; */
-}
-
-.back > ul,
-.back > p {
-  /* margin-top: 10px; */
-  padding: 20px;
-  list-style-type: none;
-  margin: auto;
-  /* margin-left: 20px; */
-}
-
-.back > p {
-  text-align: center;
-}
-
-.back > ul > li {
-  padding: 4px;
-}
-
+/* cart icon */
 .back > p > i {
   background: black;
   color: white;
   border-radius: 50%;
   padding: 4px;
   margin-top: 10px;
+  font-size: 20pt;
 }
 
 .back > p > i:hover {

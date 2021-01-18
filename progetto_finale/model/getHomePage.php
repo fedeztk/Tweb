@@ -1,4 +1,6 @@
 <?php
+// fetch 3 random images to display on home page
+
 include("user/util.php");
 
 header("Content-type: application/json");

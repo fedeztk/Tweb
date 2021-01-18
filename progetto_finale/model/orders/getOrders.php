@@ -1,4 +1,6 @@
 <?php
+// get user order infos and sort them with most recent on top
+
 include("../user/util.php");
 
 header("Content-type: application/json");

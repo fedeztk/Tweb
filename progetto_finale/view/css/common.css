@@ -1,3 +1,5 @@
+/* common style used by all BB pages */
+
 * {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 14pt;
@@ -5,65 +7,39 @@
 
 #frame {
   width: 90%;
-  /* height: 100%; */
   margin: 0 auto;
-  /* overflow: visible; */
-  /* min-height: 500px; */
 }
 
 html {
   position: relative;
   min-height: 100%;
-  /* background-color: #e8e8e8; */
 }
 
 body {
   max-width: 1100px;
-  /* width: 90%; */
+  min-width: 520px;
   margin: auto;
   height: 100%;
   margin-bottom: 100px;
   margin-top: 100px;
 }
 
-
-
 h1 {
   text-align: center;
-  /* font-family: "Roboto Mono", Helvetica, sans-serif; */
   font-size: 44pt;
+}
 
+h2 {
+  text-align: center;
+  font-size: 20pt;
 }
 
 hr{
-
   white-space: nowrap;
   overflow: hidden;
   animation: animated-text 2s steps(39, end) 1s 1 normal both,
     animated-cursor 500ms steps(39, end) infinite;
   margin: 0 auto;
-}
-
-/* text animation */
-
-@keyframes animated-text {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
 }
 
 a {
@@ -78,22 +54,38 @@ a:hover {
   color: darkgoldenrod;
 }
 
+/* text animation */
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* cursor animations */
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 /* feedback message */
 
 #flash {
-/* margin: 30px; */
-/* width: 50%; */
   padding: 12px;
   text-align: center;
   display: none;
   z-index: 2;
-  cursor: crosshair;
+  cursor: pointer;
   position: fixed;
   top: 63px;
   left: 5%;
-  /* right: 10%; */
   width: 90%;
-  /* transform: translate(0, -50%); */
 }
 
 #flash.warning {
@@ -106,8 +98,4 @@ a:hover {
 
 #flash.success {
   background-color: lightgreen;
-  /* position: fixed; */
-  /* top: 50%; */
 }
-
-/* end feedback message */

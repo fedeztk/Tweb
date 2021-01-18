@@ -1,0 +1,11 @@
+/* style for about page */
+textarea{
+  width: 100%;
+  height: 100px;
+  outline: none;
+}
+
+textarea:focus {
+  outline: solid 2px #6c757d;
+  transition: all 200ms linear;
+}

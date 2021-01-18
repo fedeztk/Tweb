@@ -37,19 +37,19 @@ VALUES
 ("Omaggio a Matisse n.2", "vaso", "terra nera", "nero,azzurro", 11, 26, 4.7, true, 100),
 ("Omaggio a Matisse n.1", "vaso", "terra bianca", "bianco,blu", 12, 16.5, 4.5, true, 100),
 
-("Ciotola Mexico", "piatto", "terra rossa", "giallo, verde", 10, 2, null, true, 10),
-("Piatto piccolo Mexico", "piatto", "terra rossa", "giallo, verde", 19.5, 1.5, null, true, 10),
-("Piatto ovale Mexico", "piatto", "terra rossa", "giallo, verde", 28, 2, 21.5, true, 15),
-("Piatto rettangolare Mexico", "piatto", "terra rossa", "giallo, verde", 16.5, 2.5, 15, true, 15),
+("Ciotola Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 10, 2, null, true, 10),
+("Piatto piccolo Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 19.5, 1.5, null, true, 10),
+("Piatto ovale Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 28, 2, 21.5, true, 15),
+("Piatto rettangolare Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 16.5, 2.5, 15, true, 15),
 
 ("Il ciccione felice", "scatola", "terra bianca", "bianco", 10.5, 10.5, 9.5, true, 20),
 
-("Mandala 1", "ciotola", "terra bianca", "bianco", 7.5, 2, null, true, 10),
-("Mandala 2", "ciotola", "terra bianca", "bianco", 12.5, 4, null, true, 10),
+("Mandala 1", "ciotola", "terra bianca", "bianco,terra rossa", 7.5, 2, null, true, 10),
+("Mandala 2", "ciotola", "terra bianca", "bianco,terra rossa", 12.5, 4, null, true, 10),
 
 ("Bicchiere", "bicchiere", "terra rossa", "blu,terra cotta", 6.5, 7, null, true, 10),
 
-("Beba", "vaso,scultura", "terra rossa", "bianco", 6.5, 6.5, 9.5, true, 25),
+("Beba", "scultura", "terra rossa", "bianco", 6.5, 6.5, 9.5, true, 25),
 
 ("Il bricco del Re", "bricco", "terra bianca", "bianco", 9, 7, 7, true, 20),
 
