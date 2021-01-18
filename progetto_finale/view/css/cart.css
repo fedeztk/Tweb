@@ -1,3 +1,5 @@
+/* cart page style */
+
 .cartList {
   width: 750px;
   margin: 0 auto;
@@ -17,6 +19,7 @@
   border-bottom: 1px solid #e1e8ee;
 }
 
+/* "X" button */
 button[name="remove"] {
   position: relative;
   top: 50%;
@@ -42,6 +45,7 @@ button[name="remove"] {
   height: 28px;
 }
 
+/* "+" and "-" buttons */
 button[name="minus"],
 button[name="plus"] {
   width: 30px;
