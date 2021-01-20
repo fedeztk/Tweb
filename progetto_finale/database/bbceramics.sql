@@ -37,10 +37,10 @@ VALUES
 ("Omaggio a Matisse n.2", "vaso", "terra nera", "nero,azzurro", 11, 26, 4.7, true, 100),
 ("Omaggio a Matisse n.1", "vaso", "terra bianca", "bianco,blu", 12, 16.5, 4.5, true, 100),
 
-("Ciotola Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 10, 2, null, true, 10),
-("Piatto piccolo Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 19.5, 1.5, null, true, 10),
-("Piatto ovale Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 28, 2, 21.5, true, 15),
-("Piatto rettangolare Mexico", "piatto", "terra rossa", "giallo, verde,terra rossa", 16.5, 2.5, 15, true, 15),
+("Ciotola Mexico", "piatto", "terra rossa", "giallo,verde,terra rossa", 10, 2, null, true, 10),
+("Piatto piccolo Mexico", "piatto", "terra rossa", "giallo,verde,terra rossa", 19.5, 1.5, null, true, 10),
+("Piatto ovale Mexico", "piatto", "terra rossa", "giallo,verde,terra rossa", 28, 2, 21.5, true, 15),
+("Piatto rettangolare Mexico", "piatto", "terra rossa", "giallo,verde,terra rossa", 16.5, 2.5, 15, true, 15),
 
 ("Il ciccione felice", "scatola", "terra bianca", "bianco", 10.5, 10.5, 9.5, true, 20),
 
