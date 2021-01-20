@@ -49,7 +49,7 @@ function buildOrders(orders) {
   });
 
   orders.forEach(function(order) {
-    setOrder(order)
+    setOrder(order);
   });
 }
 

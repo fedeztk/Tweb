@@ -12,7 +12,7 @@ $db = connectToDB();
 $ordersQ = $db->prepare(
     'SELECT street, prov, city, orderDate, total
     FROM userOrder
-    WHERE email = ?
+    WHERE email = ? AND ongoing = TRUE
     ORDER BY orderDate DESC'
 );
 

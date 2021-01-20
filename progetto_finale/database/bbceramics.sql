@@ -93,6 +93,7 @@ CREATE TABLE userOrder (
   quantity varchar(255) NOT NULL,
   orderDate datetime NOT NULL,
   total int NOT NULL,
+  ongoing boolean DEFAULT TRUE,
   FOREIGN KEY (email) REFERENCES user(email) ON DELETE CASCADE ON UPDATE CASCADE,
   PRIMARY KEY (email, orderDate)
 );

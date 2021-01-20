@@ -9,7 +9,7 @@ $date = $_GET["date"];
 
 $db = connectToDB();
 
-$removeQ = $db->prepare('DELETE FROM userOrder WHERE orderDate = ? AND email = ?');
+$removeQ = $db->prepare('DELETE FROM userOrder WHERE orderDate = ? AND email = ? AND ongoing = TRUE');
 
 $removeQ->execute(array($date, $email));
 
