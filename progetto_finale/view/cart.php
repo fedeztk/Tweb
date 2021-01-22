@@ -5,7 +5,7 @@
 <?php include("top.html");
 include("../model/common.php");
 ?>
-<script src="../controller/cart.js" type="text/javascript"></script>
+<script src="../controller/cart.js"></script>
 <link href="css/cart.css" type="text/css" rel="stylesheet">
 
 </head>

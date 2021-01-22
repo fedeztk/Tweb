@@ -11,7 +11,7 @@ if (isset($_SESSION['email']))
     header('location: index.php');
 ?>
 
-<script src="../controller/user.js" type="text/javascript"></script>
+<script src="../controller/user.js"></script>
 <!-- common style for form-boxes -->
 <link href="css/boxes.css" type="text/css" rel="stylesheet">
 <link href="css/user.css" type="text/css" rel="stylesheet">

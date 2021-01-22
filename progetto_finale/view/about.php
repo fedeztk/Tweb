@@ -6,7 +6,7 @@
 include("../model/common.php");
 ?>
 
-<script src="../controller/about.js" type="text/javascript"></script>
+<script src="../controller/about.js"></script>
 <link href="css/boxes.css" type="text/css" rel="stylesheet">
 <link href="css/about.css" type="text/css" rel="stylesheet">
 </head>

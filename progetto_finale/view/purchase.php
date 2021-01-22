@@ -5,7 +5,7 @@
 <?php include("top.html");
 include("../model/common.php");
 ?>
-<script src="../controller/purchase.js" type="text/javascript"></script>
+<script src="../controller/purchase.js"></script>
 <!-- jquery mask plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <!-- common style for form-boxes -->
@@ -38,7 +38,7 @@ include("../model/common.php");
               <dd><input type="text" name='cvc' data-mask="000" placeholder="000" maxlength="3" required></dd>
           </div>
           <dt></dt>
-          <dd><input type="submit" name="submit" value="Acquista" required></dd>
+          <dd><input type="submit" name="submit" value="Acquista"></dd>
       </dl>
   </div>
 

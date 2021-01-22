@@ -1,20 +1,20 @@
 /* style of purchase page */
 
 .multi {
-    width: 100%;
+  width: 100%;
   padding-top: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-.multi>dt {
+.multi > dt {
   width: 20%;
 }
 
-.multi>dd:nth-child(2){
-    padding-right: 10px;
+.multi > dd:nth-child(2) {
+  padding-right: 10px;
 }
 
-.multi>dd {
+.multi > dd {
   width: 30%;
 }

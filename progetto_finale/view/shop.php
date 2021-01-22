@@ -5,7 +5,7 @@
 <?php include("top.html");
 include("../model/common.php");
 ?>
-<script src="../controller/shop.js" type="text/javascript"></script>
+<script src="../controller/shop.js"></script>
 <link href="css/shop.css" type="text/css" rel="stylesheet">
 
 </head>

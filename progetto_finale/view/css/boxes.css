@@ -16,19 +16,19 @@
 }
 
 
-dl {
+#formWrap dl {
   padding: 0px 15px 15px 15px;
   margin: auto;
   font-size: 14pt;
 }
 
-dt {
+#formWrap dt {
   text-align: left;
   padding-top: 15px;
   font-weight: bold;
 }
 
-dd {
+#formWrap dd {
   margin: auto;
   border-radius: 5px;
   padding-top: 5px;

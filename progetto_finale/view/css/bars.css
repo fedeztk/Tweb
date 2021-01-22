@@ -90,6 +90,12 @@ a #logoMain {
   color: #f4f4f9;
 }
 
+#navbar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* responsive bars on small screens, leaves only icons in top bar, hide w3c img on bottom bar*/
 @media (max-width: 750px) {
   #footer > #w3c,
@@ -109,10 +115,6 @@ a #logoMain {
 }
 
 #drop:hover #dropContent {
-  display: block;
-}
-
-#drop:click #dropContent {
   display: block;
 }
 
@@ -149,33 +151,19 @@ a #logoMain {
 
 /* animated cart icon when there is at least one product in it */
 .fa-cart-arrow-down {
-  -webkit-animation: infiniteRotate 0.7s linear infinite; /* Safari */
   animation: infiniteRotate 0.7s linear infinite;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes infiniteRotate {
-  0% {
-    -webkit-transform: rotate(15deg);
-  }
-  50% {
-    -webkit-transform: rotate(-15deg);
-  }
-  100% {
-    -webkit-transform: rotate(15deg);
-  }
-}
-
 /* Standard syntax */
-@keyframes infinite-rotate {
+@keyframes infiniteRotate {
   0% {
-    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
   }
   50% {
-    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
   100% {
-    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
   }
 }
 /* navbar end  */
