@@ -39,11 +39,6 @@ function buildOrders(orders) {
     alt: "trash"
   });
 
-  //toggle bg color of dragged order
-  $("#frame img").hover(function() {
-    $(".ui-draggable-dragging").toggleClass("hovering");
-  });
-
   trash.appendTo("#frame");
 
   // set drag and drop for droppable
@@ -51,6 +46,11 @@ function buildOrders(orders) {
     drop: orderDropped,
     hoverClass: 'hovered',
     accept: '.order'
+  });
+
+  //toggle bg color of dragged order
+  $("#frame img").hover(function() {
+    $(".ui-draggable-dragging").toggleClass("hovering");
   });
 
   orders.forEach(function(order) {
