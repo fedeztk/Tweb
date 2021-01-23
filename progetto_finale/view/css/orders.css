@@ -70,3 +70,8 @@
 .hovered {
   cursor: pointer;
 }
+
+.hovering {
+  background-color: firebrick;
+  color: white;
+}
