@@ -27,7 +27,7 @@ if (empty($street) || empty($city) || empty($prov)) {
     $orderQ = $db->prepare('INSERT INTO userOrder (email, street, prov, city, id, quantity, orderDate, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
     $orderQ->execute(array($email, $street, $prov, $city, $idStr, $quantityStr, $orderDate, $total));
 
-    // query to delete current product in cart
+    // query to delete current products in cart
     $removeQ = $db->prepare('DELETE FROM cart WHERE email=?');
     $removeQ->execute(array($email));
     echo json_encode(array('status' => true));

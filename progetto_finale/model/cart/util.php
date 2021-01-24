@@ -8,15 +8,18 @@ function getTotal()
     $email = $_SESSION["email"];
     $totalQ = $db->prepare(
         'SELECT price, cart.quantity as quantity
-     FROM artwork JOIN cart
-     WHERE cart.id=artwork.id AND cart.id in (
-     SELECT id FROM cart WHERE email = ?)'
+         FROM artwork JOIN cart
+         WHERE cart.id=artwork.id AND cart.id in (
+         SELECT id FROM cart WHERE email = ?)'
     );
+
     $totalQ->execute(array($email));
     $total = 0;
+
     while ($current = $totalQ->fetch(PDO::FETCH_ASSOC)) {
         $total += $current['price'] * $current['quantity'];
     }
+
     return $total;
 }
 

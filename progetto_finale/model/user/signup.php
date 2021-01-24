@@ -18,7 +18,7 @@ if (!$_POST['username'] || !$_POST['email'] || !$_POST['pwd']) {
             $db = connectToDB();
             $newUserQ = $db->prepare('INSERT INTO user (name, password, email)  VALUES (?,?,?)');
             $newUserQ->execute(array($name, $password, $email));
-            echo json_encode(array('status' => true, 'msg' => 'Registrazione avvenuta con successo. Effettuare l\'accesso'));
+            echo json_encode(array('status' => true));
         } catch (PDOException $exception) {
             if ($exception->errorInfo[1] === 1062) {
                 echo json_encode(array('status' => false, 'msg' => "Registrazione non avvenuta, la mail risulta già associata ad un altro account"));

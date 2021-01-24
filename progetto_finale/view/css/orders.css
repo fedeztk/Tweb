@@ -71,6 +71,7 @@
   cursor: pointer;
 }
 
+/* color or order div when dragged over the trash */
 .hovering {
   background-color: firebrick;
   color: white;
